@@ -771,7 +771,7 @@ function App() {
                   <div style={{...styles.metricIcon, background: 'linear-gradient(135deg, #ff6b7a, #ff4757)'}}>⚠️</div>
                 </div>
                 <div style={styles.metricValue}>{metrics.criticos}</div>
-                <div style={styles.metricSubtext}>&gt; 15 dias</div>
+                <div style={styles.metricSubtext}>&gt; 45 dias</div>
               </div>
 
               <div 
@@ -782,7 +782,7 @@ function App() {
                   <div style={{...styles.metricIcon, background: 'linear-gradient(135deg, #ffb347, #ffa502)'}}>⏰</div>
                 </div>
                 <div style={styles.metricValue}>{metrics.atencao}</div>
-                <div style={styles.metricSubtext}>7-15 dias</div>
+                <div style={styles.metricSubtext}>30-45 dias</div>
               </div>
 
               <div 
@@ -793,7 +793,7 @@ function App() {
                   <div style={{...styles.metricIcon, background: 'linear-gradient(135deg, #7bed9f, #2ed573)'}}>✅</div>
                 </div>
                 <div style={styles.metricValue}>{metrics.normais}</div>
-                <div style={styles.metricSubtext}>&lt; 7 dias</div>
+                <div style={styles.metricSubtext}>&lt; 30 dias</div>
               </div>
             </div>
 

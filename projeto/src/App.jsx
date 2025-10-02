@@ -852,9 +852,9 @@ function App() {
                     style={styles.filterInput}
                   >
                     <option value="">Todos</option>
-                    <option value="criticos">Críticos (&gt; 15 dias)</option>
-                    <option value="atencao">Atenção (7-15 dias)</option>
-                    <option value="normais">Normais (&lt; 7 dias)</option>
+                    <option value="criticos">Críticos (&gt; 60 dias)</option>
+                    <option value="atencao">Atenção (30-45 dias)</option>
+                    <option value="normais">Normais (&lt; 30 dias)</option>
                   </select>
                 </div>
                 

@@ -174,11 +174,11 @@ function App() {
     
     if (selectedStatus) {
       if (selectedStatus === 'criticos') {
-        filtered = filtered.filter(item => item.permanencia > 15)
+        filtered = filtered.filter(item => item.permanencia > 45)
       } else if (selectedStatus === 'atencao') {
-        filtered = filtered.filter(item => item.permanencia >= 7 && item.permanencia <= 15)
+        filtered = filtered.filter(item => item.permanencia >= 30 && item.permanencia <= 45)
       } else if (selectedStatus === 'normais') {
-        filtered = filtered.filter(item => item.permanencia < 7)
+        filtered = filtered.filter(item => item.permanencia < 30)
       }
     }
     
@@ -197,9 +197,9 @@ function App() {
   // Calcular métricas
   const metrics = {
     total: data.length,
-    criticos: data.filter(item => item.permanencia > 15).length,
-    atencao: data.filter(item => item.permanencia >= 7 && item.permanencia <= 15).length,
-    normais: data.filter(item => item.permanencia < 7).length
+    criticos: data.filter(item => item.permanencia > 45).length,
+    atencao: data.filter(item => item.permanencia >= 30 && item.permanencia <= 45).length,
+    normais: data.filter(item => item.permanencia < 30).length
   }
 
   // Obter valores únicos para filtros
@@ -210,14 +210,14 @@ function App() {
 
   // Função para obter cor baseada na permanência
   const getPermanenciaColor = (dias) => {
-    if (dias > 15) return '#ff4757'
-    if (dias >= 7) return '#ffa502'
+    if (dias > 45) return '#ff4757'
+    if (dias >= 30) return '#ffa502'
     return '#2ed573'
   }
 
   const getPermanenciaBg = (dias) => {
-    if (dias > 15) return 'linear-gradient(135deg, #ff6b7a, #ff4757)'
-    if (dias >= 7) return 'linear-gradient(135deg, #ffb347, #ffa502)'
+    if (dias > 45) return 'linear-gradient(135deg, #ff6b7a, #ff4757)'
+    if (dias >= 30) return 'linear-gradient(135deg, #ffb347, #ffa502)'
     return 'linear-gradient(135deg, #7bed9f, #2ed573)'
   }
 
